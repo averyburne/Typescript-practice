@@ -1,1 +1,5 @@
-let var: number = 5;
+export {}
+
+let num: number = 5;
+
+console.log(num)
