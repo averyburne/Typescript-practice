@@ -1,4 +1,4 @@
 "use strict";
 exports.__esModule = true;
-var num = 5;
-console.log(num);
+var nameHTML = document.getElementById("name");
+console.log(nameHTML);

@@ -1,5 +1,5 @@
 export {}
 
-let num: number = 5;
+let nameHTML: any = document.getElementById("name");
 
-console.log(num)
+console.log(nameHTML)
