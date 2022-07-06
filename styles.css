@@ -1,11 +1,16 @@
 .box {
     border: 1px solid black;
+    padding: 0.5rem;
 }
 
-/* #box {
-    display: flexbox;
+.form-item {
+    display: inline-block;
+}
+
+/* span.form-item {
+    display: inline;
 } */
 
-.form-item {
-    display: block;
+label.form-item {
+    padding: 2px;
 }
