@@ -17,10 +17,14 @@
         <div class="box">
             <h3>Calculate BMI</h3>
             <form id="BMI-form">
-                <label class="form-item" for="height">Enter Height:</label>
-                <input class="form-item" id="height" type="text"><span>in.</span>
-                <label class="form-item" for="weight">Enter Weight:</label><span>lbs.</span>
-                <input class="form-item" id="weight" type="number">
+                <div>
+                    <label class="form-item" for="height">Enter Height:</label>
+                    <input class="form-item" id="height" type="text"><span>in.</span>
+                </div>
+                <div>
+                    <label class="form-item" for="weight">Enter Weight:</label>
+                    <input class="form-item" id="weight" type="number"><span>lbs.</span>
+                </div> 
             </form>
             <button onclick="displayBMI()" >Calculate BMI</button>
             <span id="BMI-display"></span>
