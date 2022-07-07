@@ -9,11 +9,6 @@
         <script src="script1.js"></script>
     </head>
     <body>
-        <div class="box" id="box1"><span id="box-text">Box 1</span i>
-            <label for="name">Enter Name:</label>
-            <input id="name" placeholder="AB" type="text">
-            <button id="btn-get">Click</button>
-        </div>
         <div class="box">
             <h3>Calculate BMI</h3>
             <form id="BMI-form">
@@ -26,8 +21,9 @@
                     <input class="form-item" id="weight" type="number"><span>lbs.</span>
                 </div> 
             </form>
-            <button onclick="displayBMI()" >Calculate BMI</button>
+            <button id="BMI-btn" onclick="displayBMI()" >Calculate BMI</button>
             <span id="BMI-display"></span>
+            <span id="BMI-range"></span>
         </div>
     </body>
 </html>

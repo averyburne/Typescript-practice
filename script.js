@@ -1,10 +1,5 @@
 "use strict";
 exports.__esModule = true;
-var nameHTML = document.getElementById("name");
-var btnGet = document.getElementById('btn-get');
-var nameVal = nameHTML.value;
-var heightHTML = document.getElementById("height").value;
-var weightHTML = document.getElementById("weight");
 // const convertToMeterSquared = (height: number, units: string): number => {
 //     if (units === 'inches') {
 //         return (height * 0.3048) ** 2
@@ -22,14 +17,26 @@ var calculateBMI = function () {
     var weightInKg = weightHTML * 0.453592;
     var BMI = weightInKg / (Math.pow(heightInMeters, 2));
     return Math.round(BMI * 100) / 100;
-    console.log(Math.round(4 * 100) / 100);
 };
 var displayBMI = function () {
-    console.log(calculateBMI());
+    var BMI = calculateBMI();
+    var BMIRange;
     // console.log(weightHTML)
-    document.getElementById("BMI-display").innerText = calculateBMI().toString();
+    if (BMI > 18 && BMI <= 25) {
+        BMIRange = "Healthy";
+    }
+    else if (BMI < 18) {
+        BMIRange = "Underweight";
+    }
+    else if (BMI > 25 && BMI <= 30) {
+        BMIRange = "Overweight";
+    }
+    else if (BMI > 30) {
+        BMIRange = "Obese";
+    }
+    document.getElementById("BMI-display").innerText = BMI.toString();
+    document.getElementById("BMI-range").innerText = BMIRange;
 };
-btnGet.addEventListener('click', function () {
-    document.getElementById("box-text").innerText = nameHTML.value;
-    console.log(nameVal);
+document.getElementById("BMI-btn").addEventListener("click", function () {
+    displayBMI();
 });
