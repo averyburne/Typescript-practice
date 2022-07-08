@@ -25,7 +25,7 @@ var displayBMI = function () {
     if (BMI > 18 && BMI <= 25) {
         BMIRange = "Healthy";
     }
-    else if (BMI < 18) {
+    else if (BMI < 18 && BMI > 0) {
         BMIRange = "Underweight";
     }
     else if (BMI > 25 && BMI <= 30) {
@@ -33,6 +33,12 @@ var displayBMI = function () {
     }
     else if (BMI > 30) {
         BMIRange = "Obese";
+    }
+    else {
+        BMIRange = "Invalid";
+        document.getElementById("BMI-display").innerText = '';
+        document.getElementById("BMI-range").innerText = BMIRange;
+        return;
     }
     document.getElementById("BMI-display").innerText = BMI.toString();
     document.getElementById("BMI-range").innerText = BMIRange;
